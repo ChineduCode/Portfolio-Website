@@ -1,0 +1,147 @@
+main{
+    color: hsl(0, 0, 0%);
+    padding: 6rem 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button{
+    margin: .5rem 0 1rem;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 18px;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(243, 100%, 62%);
+    border: 1px solid hsl(243, 100%, 62%);
+    border-radius: 10px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    &:active{
+        background-color: hsl(0, 0%, 100%);
+        color: hsl(243, 100%, 62%);
+    }
+}
+
+.welcome{
+    width: 400px;
+    max-width: 100%;
+    text-align: center;
+    border: solid 2px hsl(211, 10%, 45%);
+    border-radius: 10px;
+    padding: 20px;
+    .register_login{
+        margin-top: 2rem;
+        a{
+            display: block;
+            button{width: 100%;}
+        }
+    }
+}
+
+section.register, section.login, .add_new_portfolio{
+    width: 400px;
+    max-width: 100%;
+    background-color: hsl(0, 0, 100%);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px hsl(229, 20%, 68%);
+
+    h2{margin-bottom: 1rem ;}
+
+    form{
+        .control{
+            margin: 20px 0;
+            input{
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                border-radius: 5px;
+                border: 1px solid;
+            }
+        }
+
+        a{
+            text-decoration: underline;
+        }
+        
+        .success{
+            input{border: 1px solid forestgreen;}
+        }
+    }
+    .error{color: orangered;}
+}
+
+.dashboard{
+    .create_new{
+        margin: 2rem 0;
+        a{
+            display: block;
+            background-color: hsl(0, 0%, 100%);
+            color: hsl(211, 10%, 45%);
+            padding: 10px;
+            margin: 10px 0;
+            box-shadow: 0 0 15px hsl(229, 24%, 87%);
+            border-radius: 5px;
+        }
+    }
+}
+
+.go_back{
+    color: hsl(211, 10%, 45%);
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    span{margin-left: 10px;}
+}
+
+.create_blog_post{
+    width: 100%;
+    .header{
+        h1{margin-bottom: 15px;}
+        .styling_options{
+            span{
+                margin-right: 15px;
+                background-color: hsl(229, 24%, 87%);
+                padding: 5px;
+                display: inline-flex;
+                align-items: center;
+                cursor: pointer;
+            }
+        }
+    }
+
+    form{
+        input.title{
+            width: 100%;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid hsl(211, 10%, 45%);
+        }
+
+        textarea{
+            width: 100%;
+            height: 70vh;
+            border-radius: 10px;
+            font-size: 18px;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        .active{
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        input.file{display: block;}
+
+        button{margin-top: 20px;}
+    }
+}

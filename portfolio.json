@@ -1,0 +1,106 @@
+[
+    {
+      "image": "/todo-app.jpg",
+      "name": "Todo App",
+      "live_link": "https://todo-app-chinedu.vercel.app",
+      "github_link": "https://github.com/ChineduCode/todoapp",
+      "tools": "nextjs / (scss/sass)",
+      "stack": "fullstack"
+    },
+    {
+      "image": "/Calculator App.jpg",
+      "name": "Calculator App",
+      "live_link": "https://calculatorapp-chinedu.netlify.app",
+      "github_link": "https://github.com/ChineduCode/CalculatorApp",
+      "tools": "HTML / CSS / javascript",
+      "stack": "fullstack"
+    },
+    {
+      "image": "/Ecommerce Product Page.jpg",
+      "name": "Ecommerce Product Page",
+      "live_link": "https://ecommerceproductpage-chinedu.netlify.app",
+      "github_link": "https://github.com/ChineduCode/EcommerceProductPage",
+      "tools": "HTML / CSS / JAVASCRIPT",
+      "stack": "frontend"
+    },
+    {
+      "image": "/advice-generator.jpg",
+      "name": "Advice Generator App",
+      "live_link": "https://advicegeneratorapp-chinedu.netlify.app",
+      "github_link": "https://github.com/ChineduCode/AdviceGeneratorApp",
+      "tools": "HTML / CSS / JAVASCRIPT",
+      "stack": "fullstack"
+    }, 
+    {
+      "image": "/crowdfunding-page.jpg",
+      "name": "Crowdfunding Page",
+      "live_link": "https://crowdfundingpage-chinedu.netlify.app",
+      "github_link": "https://github.com/ChineduCode/CrowdfundingProductPage",
+      "tools": "HTML / CSS / JAVASCRIPT",
+      "stack": "frontend"
+    },
+    {
+      "image": "/Launch countdwon timer.jpg",
+      "name": "Launch Countdown Timer",
+      "live_link": "https://launchcountdowntimer-chinedu.netlify.app",
+      "github_link": "https://github.com/ChineduCode/LaunchCountdownTimer",
+      "tools": "HTML / CSS / JAVASCRIPT",
+      "stack": "backend"
+    },
+    {
+      "image": "/Four Card Feature Section.jpg",
+      "name": "Four Card Feature Section",
+      "live_link": "https://fourcardfeaturesection-chinedu.netlify.app",
+      "github_link": "https://github.com/ChineduCode/FourCardFeatureSection",
+      "tools": "HTML / CSS",
+      "stack": "frontend"
+    },
+    {
+      "image": "/Intro component with signup form.jpg",
+      "name": "Intro Component With Signup Form",
+      "live_link": "https://introcomponentwithsignupform-chinedu.netlify.app",
+      "github_link": "https://github.com/ChineduCode/IntroComponentWithSignupForm",
+      "tools": "HTML / CSS / JAVASCRIPT",
+      "stack": "backend"
+    },
+    {
+      "image": "/Intro component with dropdown navigation.jpg",
+      "name": "Intro Section With dropdown navigation",
+      "live_link": "https://dropdownnavigation-chinedu.netlify.app",
+      "github_link": "https://github.com/ChineduCode/IntroSectionWithDropdownNavigation",
+      "tools": "HTML / CSS / JAVASCRIPT",
+      "stack": "frontend"
+    },
+    {
+      "image": "/Expenses Chart Component.jpg",
+      "name": "Expenses Chart Component",
+      "live_link": "https://expenseschartcomponent-chinedu.netlify.app",
+      "github_link": "https://github.com/ChineduCode/ExpensesChartComponent",
+      "tools": "HTML / CSS / JAVASCRIPT",
+      "stack": "frontend"
+    },
+    {
+      "image": "/Notification page.jpg",
+      "name": "Notifications Page",
+      "live_link": "https://notificationpage-chinedu.netlify.app",
+      "github_link": "https://github.com/ChineduCode/NotificationsPage",
+      "tools": "HTML / CSS / JAVASCRIPT",
+      "stack": "frontend"
+    },
+    {
+      "image": "/article-preview-component.jpg",
+      "name": "Article Preview Component",
+      "live_link": "https://articlepreviewcomponent-chinedu.netlify.app",
+      "github_link": "https://github.com/ChineduCode/articlepreviewcomponent",
+      "tools": "HTML / CSS / JAVASCRIPT",
+      "stack": "fullstack"
+    },
+    {
+      "image": "/Product preview card.jpg",
+      "name": "Product Preview Card",
+      "live_link": "https://productpreviewcard-chinedu.netlify.app",
+      "github_link": "https://github.com/ChineduCode/ProductPreviewCard",
+      "tools": "HTML / CSS",
+      "stack": "frontend"
+    }
+]

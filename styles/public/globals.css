@@ -1,0 +1,929 @@
+footer {
+  background-color: hsl(213, 96%, 18%);
+}
+footer .top {
+  padding: 2rem 4%;
+}
+footer .top .header {
+  text-align: center;
+}
+footer .top .header .heading {
+  color: hsl(211, 10%, 45%);
+}
+footer .top .header .heading .text {
+  margin-left: 20px;
+}
+footer .top .header h2 {
+  margin: 2rem 0;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 1px;
+}
+footer .top form {
+  text-align: center;
+}
+footer .top form input {
+  width: 100%;
+  display: inline-block;
+  padding: 15px;
+  border-radius: 50px;
+  background: none;
+  border: 1px solid hsl(211, 10%, 45%);
+  font-size: 16px;
+  color: hsl(0, 0%, 100%);
+}
+footer .top form button {
+  margin: 1.5rem 0;
+  padding: 18px 23px;
+  color: hsl(0, 0%, 100%);
+  background: none;
+  font-size: 16px;
+  border: 1px solid;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+footer .top form button:active {
+  border: 1px solid hsl(211, 10%, 45%);
+  color: hsl(211, 10%, 45%);
+}
+footer .top form svg.subscribed_check {
+  margin: 1.5rem 0;
+  cursor: default;
+  animation: subscribe 1s ease-in-out 2 alternate;
+}
+@keyframes subscribe {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+footer .top svg {
+  color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(211, 10%, 45%);
+  padding: 10px;
+  border-radius: 50%;
+}
+footer .top .contact_info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 1.5rem 0;
+}
+footer .top .contact_info .phone, footer .top .contact_info .email {
+  margin: 1rem 0;
+}
+footer .top .contact_info .phone a, footer .top .contact_info .email a {
+  display: flex;
+  align-items: center;
+  color: hsl(0, 0%, 100%);
+}
+footer .top .contact_info .phone span, footer .top .contact_info .email span {
+  margin-left: 20px;
+}
+footer .top ul.social_media_links {
+  margin: 1rem 0;
+  display: flex;
+}
+footer .top ul.social_media_links li {
+  margin-right: 20px;
+}
+footer .bottom {
+  border-top: 1px solid hsl(211, 10%, 45%);
+  color: hsl(0, 0%, 100%);
+  padding: 1rem 4%;
+}
+
+.loading {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.loading .loading-text {
+  margin-top: 8px;
+  animation: loading 2s infinite;
+}
+@keyframes loading {
+  0% {
+    color: hsl(211, 10%, 45%);
+  }
+  100% {
+    color: hsl(243, 100%, 62%);
+  }
+}
+
+.download_cv {
+  display: inline-block;
+  color: hsl(243, 100%, 62%);
+  padding: 15px 20px;
+  border: 1px solid hsl(243, 100%, 62%);
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.download_cv:active {
+  background-color: hsl(243, 100%, 62%);
+  color: hsl(0, 0%, 100%);
+}
+
+.next_previous_icons span {
+  color: hsl(243, 100%, 62%);
+  border: 1px solid hsl(243, 100%, 62%);
+  display: inline-flex;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+.next_previous_icons span:active {
+  background-color: hsl(243, 100%, 62%);
+  color: hsl(0, 0%, 100%);
+}
+.next_previous_icons .next_icon {
+  margin-left: 20px;
+}
+
+.work_statistics {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 4%;
+}
+.work_statistics svg {
+  cursor: default;
+}
+.work_statistics .stats {
+  margin: 20px;
+}
+.work_statistics .stats div {
+  margin: 10px;
+}
+.work_statistics .stats .icon {
+  border: 1px solid hsl(243, 100%, 62%);
+  display: inline-flex;
+  border-radius: 10px;
+  padding: 15px;
+  color: hsl(243, 100%, 62%);
+}
+.work_statistics .stats h2 {
+  font-size: 30px;
+  margin: 10px 0;
+  color: hsl(213, 96%, 18%);
+}
+.work_statistics .stats .text {
+  color: hsl(211, 10%, 45%);
+}
+
+.testimonial_container {
+  padding: 2.3rem 4%;
+}
+.testimonial_container .header .heading {
+  color: hsl(211, 10%, 45%);
+}
+.testimonial_container .header .heading span {
+  margin-left: 20px;
+}
+.testimonial_container .header .sub_heading {
+  margin: 1rem 0;
+  color: hsl(213, 96%, 18%);
+}
+.testimonial_container .testimonials {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(100%, auto));
+  grid-column-gap: 3%;
+  padding: 0 1rem;
+  overflow-x: scroll;
+}
+.testimonial_container .testimonials .testimonial {
+  margin: 1rem 0;
+  line-height: 20px;
+  color: hsl(211, 10%, 45%);
+  box-shadow: 0 0 10px hsl(229, 20%, 68%);
+  background-color: hsl(0, 0%, 100%);
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: 0.6s ease-in-out;
+}
+.testimonial_container .testimonials .testimonial svg {
+  color: hsl(243, 100%, 62%);
+}
+.testimonial_container .testimonials .testimonial .text {
+  margin: 1rem 0;
+}
+.testimonial_container .testimonials .testimonial big {
+  font-weight: 600;
+  color: hsl(213, 96%, 18%);
+}
+.testimonial_container .testimonials .testimonial.active {
+  display: inline-block;
+  animation: testimonialAnim 0.5s ease-in-out;
+}
+@keyframes testimonialAnim {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+.testimonial_container .next_previous_icons {
+  text-align: center;
+}
+
+section.home .hero {
+  padding: 5rem 4% 2rem;
+}
+section.home .hero .introduction {
+  margin-top: 2rem;
+}
+section.home .hero .introduction .name_content {
+  font-size: 28px;
+  font-weight: 700;
+  color: hsl(243, 100%, 62%);
+}
+section.home .hero .introduction .name_content .name {
+  font-weight: 900;
+  font-size: 38px;
+  margin-top: 5px;
+}
+section.home .hero .introduction .work_description {
+  margin: 2rem 0px;
+  line-height: 22px;
+  color: hsl(211, 10%, 45%);
+}
+section.home .hero .profile-picture {
+  text-align: center;
+}
+section.home .hero .profile-picture img {
+  width: 60%;
+}
+section.home .skills {
+  padding: 2rem 4%;
+}
+section.home .skills .header {
+  color: hsl(211, 10%, 45%);
+}
+section.home .skills .header .text {
+  margin-left: 20px;
+}
+section.home .skills .sub-header {
+  margin: 1.8rem 0;
+  color: hsl(213, 96%, 18%);
+}
+section.home .skills .skills_container {
+  margin: 2.5rem 0 2rem;
+}
+section.home .skills .skills_container .skill {
+  padding: 25px 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+  box-shadow: 0 0 5px hsl(229, 20%, 68%);
+  position: relative;
+}
+section.home .skills .skills_container .skill .name {
+  color: hsl(211, 10%, 45%);
+}
+section.home .skills .skills_container .skill .percentage {
+  color: hsl(211, 10%, 45%);
+  position: absolute;
+  right: 1rem;
+}
+section.home .skills .skills_container .skill .range {
+  margin-top: 15px;
+  background-color: hsl(229, 20%, 68%);
+  height: 5px;
+  width: 100%;
+}
+section.home .skills .skills_container .skill .range .range_percentage {
+  background-color: hsl(243, 100%, 62%);
+  height: 5px;
+}
+section.home .home_portfolio {
+  padding: 2rem 4%;
+}
+section.home .home_portfolio .header {
+  display: flex;
+  flex-direction: column;
+}
+section.home .home_portfolio .header .heading .title {
+  color: hsl(211, 10%, 45%);
+}
+section.home .home_portfolio .header .heading .title .text {
+  margin-left: 20px;
+}
+section.home .home_portfolio .header .heading .sub_heading {
+  margin: 1.8rem 0;
+  color: hsl(213, 96%, 18%);
+}
+section.home .home_portfolio .portfolios {
+  margin: 2rem 0 1rem;
+}
+section.home .home_portfolio .content {
+  margin-bottom: 2rem;
+}
+section.home .home_portfolio .content .project_design {
+  height: 250px;
+  overflow: hidden;
+  background-color: rgba(220, 220, 220, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+section.home .home_portfolio .content .project_design .project_screenshot {
+  padding: 35px;
+}
+section.home .home_portfolio .content .project_design .project_screenshot img {
+  width: 100%;
+  text-align: center;
+}
+section.home .home_portfolio .content .title_tools .title {
+  margin: 1.2rem 0 0.8rem;
+  color: hsl(213, 96%, 18%);
+}
+section.home .home_portfolio .content .title_tools .tools {
+  font-size: 15px;
+  color: hsl(211, 10%, 45%);
+  text-transform: uppercase;
+}
+section.home .home_portfolio .content .links button {
+  padding: 5px 7px;
+  font-size: 15px;
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(243, 100%, 62%);
+  border: none;
+  border-radius: 4px;
+  display: inline-block;
+  transition: all 0.4s ease-in-out;
+}
+section.home .home_portfolio .content .links button:active {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(243, 100%, 62%);
+}
+section.home .home_portfolio .content .links .github {
+  margin-left: 10px;
+}
+section.home .home_portfolio .view_more {
+  color: hsl(243, 100%, 62%);
+}
+section.home .home_blog {
+  padding: 2rem 4%;
+}
+section.home .home_blog .header {
+  text-align: center;
+}
+section.home .home_blog .header .heading {
+  color: hsl(211, 10%, 45%);
+}
+section.home .home_blog .header .heading span {
+  margin-left: 20px;
+}
+section.home .home_blog .header .sub_heading {
+  margin: 1.8rem 0;
+  color: hsl(213, 96%, 18%);
+}
+section.home .home_blog .content {
+  text-align: center;
+  color: hsl(211, 10%, 45%);
+}
+
+section.about .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 6rem 4% 2rem;
+}
+section.about .hero .header {
+  margin-bottom: 2rem;
+}
+section.about .hero .header h1 {
+  font-size: 30px;
+  color: hsl(213, 96%, 18%);
+}
+section.about .hero .header .name {
+  margin: 1rem 0;
+  color: hsl(211, 10%, 45%);
+  background-color: hsl(231, 100%, 99%);
+  border-radius: 50px;
+  padding: 10px 15px;
+  display: inline-block;
+}
+section.about .hero .downloadcv_introduction .introduction {
+  margin-top: 2rem;
+}
+section.about .hero .downloadcv_introduction .introduction .name {
+  font-size: 32px;
+  color: hsl(243, 100%, 62%);
+}
+section.about .hero .downloadcv_introduction .introduction .skill {
+  margin: 1rem 0;
+  font-size: 18px;
+  color: hsl(211, 10%, 45%);
+}
+section.about .hero .downloadcv_introduction .introduction .description {
+  margin: 1rem 0 0;
+  line-height: 23px;
+  color: hsl(211, 10%, 45%);
+}
+section.about .experience_education {
+  padding: 2rem 4% 0;
+}
+section.about .experience_education .education_experience_bars {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+section.about .experience_education .education_experience_bars h2 {
+  margin: 10px 0;
+  color: hsl(213, 96%, 18%);
+  padding: 15px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+section.about .experience_education .education_experience_bars .active {
+  background-color: hsl(223, 19%, 93%);
+}
+section.about .experience_education .education_experience_contents {
+  margin: 1rem 0;
+}
+section.about .experience_education .education_experience_contents .education_content {
+  display: none;
+  transition: 0.4s ease-in-out;
+  animation: eduExpAnim 0.6s ease-in-out;
+}
+section.about .experience_education .education_experience_contents .education_content .education {
+  margin-top: 3rem;
+  color: hsl(211, 10%, 45%);
+}
+section.about .experience_education .education_experience_contents .education_content .education .date_started_date_ended {
+  padding: 15px;
+  border: 1px solid hsl(211, 10%, 45%);
+  color: hsl(211, 10%, 45%);
+  border-radius: 5px;
+}
+section.about .experience_education .education_experience_contents .education_content .education h3 {
+  margin: 1rem 0;
+  color: hsl(213, 96%, 18%);
+}
+section.about .experience_education .education_experience_contents .education_content .education .summary {
+  margin: 1rem 0;
+}
+section.about .experience_education .education_experience_contents .education_content .education .summary li {
+  margin: 15px 0;
+  line-height: 20px;
+}
+section.about .experience_education .education_experience_contents .experience_content {
+  display: none;
+  transition: all 0.4s ease-in-out;
+  animation: eduExpAnim 0.6s ease-in-out;
+}
+section.about .experience_education .education_experience_contents .experience_content .experience {
+  margin-top: 3rem;
+  color: hsl(211, 10%, 45%);
+}
+section.about .experience_education .education_experience_contents .experience_content .experience .date_started_date_ended {
+  padding: 15px;
+  border: 1px solid hsl(211, 10%, 45%);
+  color: hsl(211, 10%, 45%);
+  border-radius: 5px;
+}
+section.about .experience_education .education_experience_contents .experience_content .experience h3 {
+  margin: 1rem 0;
+  color: hsl(213, 96%, 18%);
+}
+section.about .experience_education .education_experience_contents .experience_content .experience .company {
+  color: hsl(211, 10%, 45%);
+}
+section.about .experience_education .education_experience_contents .experience_content .experience .experiences {
+  margin: 1rem 0;
+}
+section.about .experience_education .education_experience_contents .experience_content .experience .experiences li {
+  line-height: 20px;
+  margin: 15px 0;
+}
+section.about .experience_education .education_experience_contents .active {
+  display: block;
+  transform: scale(1);
+}
+@keyframes eduExpAnim {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+section.contact {
+  padding: 6rem 4% 2rem;
+}
+section.contact section.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+section.contact section.header .heading {
+  color: hsl(213, 96%, 18%);
+}
+section.contact section.header .sub_heading {
+  margin: 1rem;
+  color: hsl(211, 10%, 45%);
+  background-color: hsl(231, 100%, 99%);
+  border-radius: 50px;
+  padding: 10px 15px;
+  display: inline-block;
+}
+section.contact section.hero {
+  margin-top: 2rem;
+}
+section.contact section.hero iframe {
+  width: 100%;
+  border: 0px;
+  height: 300px;
+}
+section.contact section.hero .contact_me {
+  margin-top: 2rem;
+}
+section.contact section.hero .contact_me .message_me .header {
+  color: hsl(211, 10%, 45%);
+}
+section.contact section.hero .contact_me .message_me .header span {
+  margin-left: 20px;
+}
+section.contact section.hero .contact_me .message_me .sub_header {
+  margin: 1.5rem 0;
+  color: hsl(213, 96%, 18%);
+}
+section.contact section.hero .contact_me .message_me p {
+  color: hsl(211, 10%, 45%);
+}
+section.contact section.hero .contact_me .message_me form {
+  margin: 1rem 0;
+}
+section.contact section.hero .contact_me .message_me form input, section.contact section.hero .contact_me .message_me form textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid hsl(231, 11%, 63%);
+  border-radius: 10px;
+}
+section.contact section.hero .contact_me .message_me form button {
+  display: inline-block;
+  margin: 1rem 0;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 20px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(243, 100%, 62%);
+  border: 1px solid hsl(243, 100%, 62%);
+  border-radius: 10px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+section.contact section.hero .contact_me .message_me form button:active {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(243, 100%, 62%);
+}
+section.contact section.hero .contact_me .contact_details_social_media_platforms {
+  margin-top: 2rem;
+}
+section.contact section.hero .contact_me .contact_details_social_media_platforms .contact_details {
+  border: 1px solid hsl(231, 11%, 63%);
+  border-radius: 10px;
+  padding: 1rem;
+}
+section.contact section.hero .contact_me .contact_details_social_media_platforms .contact_details .contact {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  box-shadow: 0 0 15px hsl(229, 24%, 87%);
+  margin: 15px 0;
+  padding: 1rem;
+}
+section.contact section.hero .contact_me .contact_details_social_media_platforms .contact_details .contact .text {
+  font-weight: 600;
+  color: hsl(213, 96%, 18%);
+  margin: 1rem 0;
+}
+section.contact section.hero .contact_me .contact_details_social_media_platforms .contact_details .contact .detail {
+  color: hsl(211, 10%, 45%);
+  margin: 1rem 0;
+}
+section.contact section.hero .contact_me .contact_details_social_media_platforms .social_media_platforms {
+  margin: 1rem 0;
+  padding: 1rem 2rem 0;
+}
+section.contact section.hero .contact_me .contact_details_social_media_platforms .social_media_platforms h2.header {
+  color: hsl(213, 96%, 18%);
+  margin: 1rem 0 2rem;
+}
+section.contact section.hero .contact_me .contact_details_social_media_platforms .social_media_platforms .social_media_links {
+  display: flex;
+  align-items: center;
+}
+section.contact section.hero .contact_me .contact_details_social_media_platforms .social_media_platforms .social_media_links svg {
+  border: 1px solid hsl(243, 100%, 62%);
+  border-radius: 50%;
+  padding: 7px;
+  size: 80;
+  color: hsl(243, 100%, 62%);
+  margin-right: 20px;
+}
+
+section.portfolio .header {
+  padding: 6rem 1rem 2rem;
+  text-align: center;
+}
+section.portfolio .header .heading {
+  color: hsl(213, 96%, 18%);
+}
+section.portfolio .header .sub_heading {
+  margin: 1.2rem 0;
+  color: hsl(211, 10%, 45%);
+  background-color: hsl(231, 100%, 99%);
+  border-radius: 50px;
+  padding: 10px 15px;
+  display: inline-block;
+}
+section.portfolio .hero {
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+section.portfolio .hero .categories {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+section.portfolio .hero .categories span {
+  display: inline-block;
+  border: 1px solid hsl(243, 100%, 62%);
+  border-radius: 50px;
+  padding: 10px 20px;
+  color: hsl(243, 100%, 62%);
+  background-color: hsl(0, 0%, 100%);
+  margin: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+}
+section.portfolio .hero .categories span:active {
+  background-color: hsl(243, 100%, 62%);
+  color: hsl(0, 0%, 100%);
+}
+section.portfolio .hero .categories .active {
+  background-color: hsl(243, 100%, 62%);
+  color: hsl(0, 0%, 100%);
+}
+section.portfolio .hero .projects {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+section.portfolio .hero .projects .content {
+  margin-bottom: 2rem;
+}
+section.portfolio .hero .projects .content .project_design {
+  height: 250px;
+  overflow: hidden;
+  background-color: rgba(220, 220, 220, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+section.portfolio .hero .projects .content .project_design .project_screenshot {
+  padding: 35px;
+}
+section.portfolio .hero .projects .content .project_design .project_screenshot img {
+  width: 100%;
+  text-align: center;
+}
+section.portfolio .hero .projects .content .title_tools .title {
+  margin: 1.2rem 0 0.8rem;
+  color: hsl(213, 96%, 18%);
+}
+section.portfolio .hero .projects .content .title_tools .tools {
+  color: hsl(211, 10%, 45%);
+  font-size: 15px;
+  text-transform: uppercase;
+}
+section.portfolio .hero .projects .content .links {
+  margin: 0.5rem 0;
+}
+section.portfolio .hero .projects .content .links button {
+  padding: 5px 7px;
+  font-size: 15px;
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(243, 100%, 62%);
+  border: none;
+  border-radius: 4px;
+  display: inline-block;
+  transition: all 0.4s ease-in-out;
+}
+section.portfolio .hero .projects .content .links button:active {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(243, 100%, 62%);
+}
+section.portfolio .hero .projects .content .links .github {
+  margin-left: 10px;
+}
+
+section.blog .header {
+  padding: 6rem 1rem 2rem;
+  text-align: center;
+}
+section.blog .header .heading {
+  color: hsl(213, 96%, 18%);
+}
+section.blog .header .sub_heading {
+  margin: 1.2rem 0;
+  color: hsl(211, 10%, 45%);
+  background-color: hsl(231, 100%, 99%);
+  border-radius: 50px;
+  padding: 10px 15px;
+  display: inline-block;
+}
+section.blog .hero {
+  margin: 2rem 0;
+  text-align: center;
+  color: hsl(211, 10%, 45%);
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) {
+  .work_statistics {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .testimonial_container .testimonials {
+    grid-template-columns: repeat(6, minmax(49%, auto));
+  }
+  footer .top {
+    padding: 3%;
+  }
+  footer .top form {
+    display: flex;
+    align-items: center;
+  }
+  footer .top form input {
+    width: 70%;
+    margin: 0 10px;
+  }
+  footer .top form button {
+    margin: unset;
+    margin: 0 10px;
+    padding: 15px 20px;
+  }
+  footer .top .contact_info {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section.home {
+    padding: 3%;
+  }
+  section.home .portfolios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 4%;
+  }
+  section.about {
+    padding: 3%;
+  }
+  section.portfolio {
+    padding: 3%;
+  }
+  section.portfolio .hero .projects {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 4%;
+  }
+  section.blog {
+    padding: 3%;
+  }
+  section.contact .contact_me {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 5%;
+    align-items: baseline;
+  }
+  section.contact .contact_me .sub_header {
+    font-size: 30px;
+  }
+  section.contact .contact_me form input {
+    width: 25%;
+  }
+}
+/* Larger Desktop */
+@media (min-width: 1120px) {
+  .work_statistics .stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .work_statistics .stats h2 {
+    font-size: 35px;
+    margin-top: 0;
+  }
+  .testimonial_container .header .sub_heading {
+    font-weight: 35px;
+  }
+  .testimonial_container .testimonials {
+    grid-template-columns: repeat(6, minmax(31.5%, auto));
+  }
+  footer .top h2 {
+    font-size: 35px;
+  }
+  footer .top form {
+    justify-content: center;
+    margin: 1.5rem 0;
+  }
+  footer .top form input {
+    padding: 20px;
+    margin-right: 3rem;
+  }
+  footer .top form button {
+    padding: 20px 30px;
+  }
+  footer .top .contact_info_socialmedia_platform {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+  footer .bottom {
+    text-align: center;
+    padding: 1.5rem 0;
+  }
+  section.home .hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  section.home .hero .introduction .name_content {
+    font-size: 35px;
+  }
+  section.home .hero .introduction .name_content .name {
+    font-size: 50px;
+  }
+  section.home .skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: baseline;
+    justify-content: space-around;
+  }
+  section.home .skills .top {
+    width: 100%;
+  }
+  section.home .skills .top h2 {
+    font-size: 32px;
+  }
+  section.home .skills .top .download_cv {
+    margin-top: 3rem;
+  }
+  section.home .skills .skills_container {
+    width: 100%;
+    margin: 0;
+  }
+  section.home .sub_heading {
+    font-size: 35px;
+  }
+  section.home .portfolios {
+    grid-column-gap: 7%;
+  }
+  section.about .hero .downloadcv_introduction {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+  }
+  section.about .hero .downloadcv_introduction .introduction {
+    width: 50%;
+  }
+  section.about .hero .downloadcv_introduction .introduction .name {
+    font-size: 40px;
+  }
+  section.about .experience_education {
+    margin-top: 3rem;
+  }
+  section.about .experience_education .education_experience_bars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 4%;
+  }
+  section.about .experience_education .education_experience_contents .education, section.about .experience_education .education_experience_contents .experience {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    align-items: first baseline;
+    grid-column-gap: 5%;
+  }
+  section.about .experience_education .education_experience_contents .education .date_started_date_ended, section.about .experience_education .education_experience_contents .experience .date_started_date_ended {
+    display: inline-flex;
+  }
+  section.about .experience_education .education_experience_contents .education h3, section.about .experience_education .education_experience_contents .experience h3 {
+    margin-top: 0px;
+    font-size: 23px;
+  }
+  section.portfolio .hero .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}/*# sourceMappingURL=globals.css.map */

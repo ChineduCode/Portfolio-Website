@@ -1,0 +1,148 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body{
+    min-height: 100vh;
+    background: hsl(0, 0%, 100%);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+svg{cursor: pointer;}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 0 5px hsl(229, 20%, 68%);
+    .logo{
+        font-size: 25px;
+        font-weight: 900;
+        color: hsl(243, 100%, 62%);
+    }
+    .menu-icon{color: hsl(243, 100%, 62%);}
+    .hire_me{display: none;}
+}
+
+nav.nav{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    height: 100vh;
+    width: 80%;
+    padding: 1rem 2rem;
+    box-shadow: 0 0 10px hsl(229, 20%, 68%);
+    transform: translateX(120%) scaleX(0);
+    transition: all .4s ease-in-out;
+    background-color: hsl(0, 0%, 100%);
+
+    .close-menu{
+        text-align: right;
+
+        svg{
+            border: 1px solid hsl(243, 100%, 62%);
+            border-radius: 50%;
+            padding: 5px;
+            color: hsl(243, 100%, 62%)
+        }
+    }
+
+    .nav_links{
+        margin-top: 3rem;
+        list-style-type: none;
+
+        .nav_link{
+            margin: 20px 0;
+            padding: 5px 0;
+            font-size: 18px;
+            
+            a{
+                color: hsl(211, 10%, 45%);
+                transition: .5s ease;
+                &:active{font-weight: 600;}
+            }
+        }
+    }
+
+    .social_media_links{
+        margin-top: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        list-style-type: none;
+
+        svg{
+            border: 1px solid hsl(243, 100%, 62%);
+            border-radius: 50%;
+            padding: 7px;
+            size: 80;
+            color: hsl(243, 100%, 62%)
+        }
+    }
+}
+nav.active_nav{transform: translateX(0%) scaleX(1);}
+
+//HireMe component
+.hire_me{
+    display: inline-block;
+    color: hsl(243, 100%, 62%);
+    padding: 12px 25px;
+    border: 1px solid hsl(243, 100%, 62%);
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: hsl(0, 0%, 100%);
+    cursor: pointer;
+
+    &:active{
+        background-color: hsl(243, 100%, 62%);
+        color: hsl(0, 0%, 100%);
+    }
+}
+
+/* Larger Desktop */
+@media (min-width: 1120px) {
+    //header
+    header{
+        padding: 1.2rem 3rem;
+        nav.nav{
+            position: unset;
+            height: auto;
+            width: unset;
+            padding: 0px;
+            box-shadow: unset;
+            transform: unset;
+            background-color: unset;
+        
+            .close-menu{display: none;}
+        
+            .nav_links{
+                margin-top: 0px;
+                display: flex;
+                align-items: center;
+        
+                .nav_link{
+                    margin: 0 20px;
+                    padding: 0px;
+                }
+            }
+            .social_media_links{display: none;}
+        }
+        .menu_icon_hire_me{
+            .menu-icon{display: none;}
+            .hire_me{display: inline-block;}
+        }
+    }
+}
