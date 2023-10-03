@@ -1,16 +1,26 @@
+import '../styles/globals/globals.css'
 import { PT_Sans } from 'next/font/google'
+import Header from '../components/Header'
 
-const pt_sans = PT_Sans({ subsets: ['latin'], weight: ['400', '700']})
+const pt_sans = PT_Sans({
+  subsets: ['latin'],
+  weight: ['400', '700']
+})
 
-export const metadata = { 
+export const metadata = {
   title: 'ChineduCode',
-  description: 'ChineduCode Portfolio Website',
+  description: 'ChineduCode portfolio website',
+  keyword: 'Chinedu, ChineduCode, PortFolio Website, Web Developer, Software Engineer, Programmer',
+  author: 'ChineduCode'
 }
 
 export default function RootLayout({ children }) {
-  return (
+  return(
     <html lang="en">
-      <body className={pt_sans.className}>{children}</body>
+      <body className={pt_sans.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   )
-}
+} 
