@@ -124,7 +124,7 @@ export default async function Home(){
         <Link href={'/portfolio'} className='view_more'>View more ...</Link>
       </section> */}
 
-      {/* <Testimonials />  Testimonials component */}
+      <Testimonials />  {/* Testimonial component */}
 
       {/* blog */}
       <section className="home_blog">
