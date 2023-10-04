@@ -4,6 +4,7 @@ import DownloadCV from '../../components/DownloadCV'
 import Testimonials from '../../components/Testimonial'
 import Projects from '@/components/Projects'
 import Link from 'next/link'
+import { Suspense } from 'react'
 
 export default async function Home(){
   
@@ -86,13 +87,14 @@ export default async function Home(){
             <h2 className="sub_heading">My Complete Projects</h2>
           </div>
         </div>
-
-        <Projects />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Projects /> 
+        </Suspense>
 
         <Link href={'/portfolio'} className='view_more'>View more ...</Link>
       </section>
 
-      <Testimonials />  {/* Testimonial component */}
+      <Testimonials />  {/* Testimonial component */} 
 
       {/* blog */}
       <section className="home_blog">
