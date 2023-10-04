@@ -5,7 +5,7 @@ async function fetchProjects(){
         next: {revalidate: 10}
     })
     const projects = await res.json()
-    return projects.slice(0, 2);
+    return projects;
 }
 
 export default async function Projects(){
