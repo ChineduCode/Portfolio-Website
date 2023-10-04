@@ -33,10 +33,10 @@ header {
 header .logo {
   font-size: 25px;
   font-weight: 900;
-  color: hsl(243, 100%, 62%);
+  color: hsl(213, 96%, 18%);
 }
 header .menu-icon {
-  color: hsl(243, 100%, 62%);
+  color: hsl(213, 96%, 18%);
 }
 header .hire_me {
   display: none;
@@ -58,10 +58,10 @@ nav.nav .close-menu {
   text-align: right;
 }
 nav.nav .close-menu svg {
-  border: 1px solid hsl(243, 100%, 62%);
+  border: 1px solid hsl(213, 96%, 18%);
   border-radius: 50%;
   padding: 5px;
-  color: hsl(243, 100%, 62%);
+  color: hsl(213, 96%, 18%);
 }
 nav.nav .nav_links {
   margin-top: 3rem;
