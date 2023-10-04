@@ -1,7 +1,7 @@
 import WorkStats from '../../components/WorkStats' 
 import HireMe from '@/components/Hire_Me'
 import DownloadCV from '../../components/DownloadCV'
-// import Testimonials from '../../components/Testimonial'
+import Testimonials from '../../components/Testimonial'
 // import Link from 'next/link'
 // import { NextResponse } from 'next/server'
 
