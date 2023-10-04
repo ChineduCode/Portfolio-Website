@@ -19,36 +19,36 @@ import DownloadCV from '../../components/DownloadCV'
 
 export default async function Home(){
   
-  // let skills = [
-  //   {
-  //     name : 'HTML',
-  //     percentage: '95%'
-  //   },
-  //   {
-  //     name : 'CSS',
-  //     percentage: '80%'
-  //   },
-  //   {
-  //     name : 'JAVASCRIPT',
-  //     percentage: '85%'
-  //   },
-  //   {
-  //     name : 'REACT JS',
-  //     percentage: '87%'
-  //   },
-  //   {
-  //     name : 'NEXT JS',
-  //     percentage: '80%'
-  //   },
-  //   {
-  //     name : 'NODE JS & EXPRESS JS',
-  //     percentage: '85%'
-  //   },
-  //   {
-  //     name : 'MONGODB',
-  //     percentage: '94%'
-  //   },
-  // ]
+  let skills = [
+    {
+      name : 'HTML',
+      percentage: '95%'
+    },
+    {
+      name : 'CSS',
+      percentage: '80%'
+    },
+    {
+      name : 'JAVASCRIPT',
+      percentage: '85%'
+    },
+    {
+      name : 'REACT JS',
+      percentage: '87%'
+    },
+    {
+      name : 'NEXT JS',
+      percentage: '80%'
+    },
+    {
+      name : 'NODE JS & EXPRESS JS',
+      percentage: '85%'
+    },
+    {
+      name : 'MONGODB',
+      percentage: '94%'
+    },
+  ]
 
   // //fetch portfolio
   // const portfolios = await getPortfolio()
@@ -70,7 +70,7 @@ export default async function Home(){
       </section>
       
       {/* skills */}
-      {/* <section className="skills">
+      <section className="skills">
         <div className="top">
           <div className="header"> || <span className="text">Special Skills</span> </div>
           <h2 className="sub-header"> My Special Skill Fields Here </h2>
@@ -78,7 +78,7 @@ export default async function Home(){
         </div>
 
         <div className="skills_container">
-          {skills.map((skill, index) =>
+          {skills.map((skill, index) => 
             <div className="skill" key={index}>
               <span className="name"> {skill.name} </span>
               <span className="percentage"> {skill.percentage} </span>
@@ -88,7 +88,7 @@ export default async function Home(){
             </div>
           )}
         </div>
-      </section> */}
+      </section>
       
       <WorkStats /> {/* work stats component */}
 
