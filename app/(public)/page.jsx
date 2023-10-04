@@ -2,20 +2,20 @@ import WorkStats from '../../components/WorkStats'
 import HireMe from '@/components/Hire_Me'
 import DownloadCV from '../../components/DownloadCV'
 import Testimonials from '../../components/Testimonial'
-// import Link from 'next/link'
-// import { NextResponse } from 'next/server'
+import Link from 'next/link'
+import { NextResponse } from 'next/server'
 
-// async function getPortfolio(){
-//   const res = await fetch(`http://localhost:3000/api/portfolio`, {
-//     next: { revalidate : 10 }
-//   })
+async function getPortfolio(){
+  const res = await fetch(`http://localhost:3000/api/portfolio`, {
+    next: { revalidate : 10 }
+  })
   
-//   if(!res.ok){
-//     return NextResponse.json('Failed to fetch portfolios')
-//   }
+  if(!res.ok){
+    return NextResponse.json('Failed to fetch portfolios')
+  }
 
-//   return res.json();
-// }
+  return res.json();
+}
 
 export default async function Home(){
   
@@ -50,9 +50,9 @@ export default async function Home(){
     },
   ]
 
-  // //fetch portfolio
-  // const portfolios = await getPortfolio()
-  // const minimalizedPortfolio = portfolios.slice(0,2)
+  //fetch portfolio
+  const portfolios = await getPortfolio()
+  const minimalizedPortfolio = portfolios.slice(0,2)
 
   return (
     <section className='home'>
@@ -93,7 +93,7 @@ export default async function Home(){
       <WorkStats /> {/* work stats component */}
 
       {/* Portfolio */}
-      {/* <section className="home_portfolio">
+      <section className="home_portfolio">
         <div className="header">
           <div className="heading">
             <div className="title">
@@ -122,7 +122,7 @@ export default async function Home(){
         </div>
 
         <Link href={'/portfolio'} className='view_more'>View more ...</Link>
-      </section> */}
+      </section>
 
       <Testimonials />  {/* Testimonial component */}
 
