@@ -1,10 +1,10 @@
 'use client'
 import {FaQuoteLeft, FaAnglesLeft, FaAnglesRight} from 'react-icons/fa6'
-import { useState, useRef } from 'react'
+import { useRef } from 'react'
 
 const Testimonials = ()=>{
 
-    const [testimonials, setTestimonials] = useState ([
+    const testimonials = [
         {
             text: 'Chinedu is a web development genius! His technical prowess and attention to detail are simply unmatched. He crafted a visually stunning website for me that not only exceeded my expectations but also wowed my clients.',
             name: 'John S.',
@@ -29,7 +29,7 @@ const Testimonials = ()=>{
             text: 'From the moment I engaged Chinedu for web development, I knew I made the right choice. His professionalism and attention to detail are truly exceptional. The website he crafted for me is a seamless blend of creativity and functionality.',
             name: 'Lisa T.',
         }
-    ])
+    ]
 
     const myRef = useRef(null)
 
@@ -44,7 +44,7 @@ const Testimonials = ()=>{
             console.log(container+ ' previous') 
         }
     }
-    
+
     
     return(
         <section className="testimonial_container" onClick={handleScroll}>
