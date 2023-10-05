@@ -13,16 +13,29 @@ const Footer = () => {
         e.preventDefault()
 
         if(!email) return
+        
+        try {
+            const res = await fetch('/api/subscribers', {
+                method: 'POST',
+                headers: {
+                    'Content-type' : 'Application.json'
+                },
+                body: JSON.stringify({ email })
+            })
 
-        await fetch('/api/subscribers', {
-            method: 'POST',
-            body: JSON.stringify({ email })
-        })
+            if(res.ok){
+                setSubscribe(true) //setting the subscribe to true to render check icon
+                setEmail(email = '')
+                await new Promise(resolve => setTimeout(resolve, 5000)) //await for 5 seconds to return the subscribe button
+                setSubscribe(false)
+            }else{
+                throw new Error('Failed to subscribe')
+            }
 
-        setSubscribe(true) //setting the subscribe to true to render check icon
-        setEmail(email = '')
-        await new Promise(resolve => setTimeout(resolve, 5000)) //await for 5 seconds to return the subscribe button
-        setSubscribe(false)
+        } catch (error) {
+            console.error(error)
+        }
+
     }
 
     return (

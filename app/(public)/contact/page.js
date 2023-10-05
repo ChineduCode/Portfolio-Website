@@ -3,13 +3,6 @@
 import { useState } from "react";
 import SocialMediaPlatforms from "../../../components/SocialMedia";
 
-async function postMessage(newMessage){
-    await fetch('/api/contact', {
-        method: 'POST',
-        body: JSON.stringify(newMessage) 
-    })
-}
-
 export default function ContactPage() {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -25,17 +18,27 @@ export default function ContactPage() {
             return
         } 
 
-        await postMessage({
-            name, 
-            email, 
-            subject, 
-            message
-        })
+        try {
+            const res = await fetch('/api/contact', {
+                method : 'POST',
+                headers : {
+                    'Content-type' : 'Application.json'
+                },
+                body : JSON.stringify({name, email, subject, message})
+            })
 
-        setName('')
-        setEmail('')
-        setSubject('')
-        setMessage('')
+            if(res.ok){
+                setName('')
+                setEmail('')
+                setSubject('')
+                setMessage('')
+            }else{
+                throw new Error('Failed to send message')
+            }
+
+        } catch (error) {
+            console.error(error)
+        }
     }
     
     return ( 
