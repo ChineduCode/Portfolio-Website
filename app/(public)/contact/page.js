@@ -79,7 +79,7 @@ export default function ContactPage() {
                             </div>
                             <div className="website contact">
                                 <div className="text">Website:</div>
-                                <div className="detail">www.chineducode.com</div>
+                                <div className="detail">chineducode.vercel.app</div>
                             </div>
                             <div className="address contact">
                                 <div className="text">Address:</div>
