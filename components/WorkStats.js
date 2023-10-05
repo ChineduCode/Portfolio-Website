@@ -6,7 +6,7 @@ const WorkStats = () => {
             <div className="happy_clients stats">
                 <div className="icon"> <FaUser size={25}/> </div>
                 <div className="right">
-                    <h2 className="stat"> 250+ </h2>
+                    <h2 className="stat"> 35+ </h2>
                     <div className="text">Happy Clients</div>
                 </div>
             </div>
@@ -14,7 +14,7 @@ const WorkStats = () => {
             <div className="project_complete stats">
                 <div className="icon"> <FaBagShopping size={25}/> </div>
                 <div className="right">
-                    <h2 className="stat"> 300+ </h2>
+                    <h2 className="stat"> 50+ </h2>
                     <div className="text">Project Complete</div>
                 </div>
             </div>
@@ -22,7 +22,7 @@ const WorkStats = () => {
             <div className="years_of_experience stats"> 
                 <div className="icon"> <FaCalendar size={25}/> </div>
                 <div className="right">
-                    <h2 className="stat"> 3+ </h2>
+                    <h2 className="stat"> 2+ </h2>
                     <div className="text">Years of Experience</div> 
                 </div>
             </div>
