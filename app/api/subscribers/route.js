@@ -11,6 +11,7 @@ export async function POST(request){
         const {email} = res
 
         if(!email){
+            alert('Please add an email')
             return NextResponse.json({msg: 'Please add a valid email'})
         }
 
