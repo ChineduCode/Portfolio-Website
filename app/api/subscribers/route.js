@@ -17,15 +17,17 @@ export async function POST(request){
         //Check if subscriber already exist
         const subscriberExist = await Subscriber.findOne({email})
         if(subscriberExist){
+            alert('Email Already Exist')
             return NextResponse.json({msg: 'Email Already Exist'})
         }
 
         //Add subscriber
         const subscriber = await Subscriber.create({email})
         if(subscriber){
+            alert('Successful')
             return NextResponse.json(subscriber)
         }else{
-            throw new Error('Not subscribed')
+            throw new Error('Not subscribed') 
         }
         
     } catch (error) {
