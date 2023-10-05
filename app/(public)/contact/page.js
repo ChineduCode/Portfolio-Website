@@ -4,7 +4,7 @@ import { useState } from "react";
 import SocialMediaPlatforms from "../../../components/SocialMedia";
 
 async function postMessage(newMessage){
-    await fetch('api/contact', {
+    await fetch('/api/contact', {
         method: 'POST',
         body: JSON.stringify(newMessage) 
     })

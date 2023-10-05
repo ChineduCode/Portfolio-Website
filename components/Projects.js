@@ -1,7 +1,8 @@
 import Link from "next/link"
 
 async function fetchProjects(){
-    const res = await fetch('http://localhost:3000/api/portfolio', {
+    const apiKey = process.env.API_KEY
+    const res = await fetch(`${apiKey}/api/portfolio`, {
         next: {revalidate: 10}
     })
     const projects = await res.json()
