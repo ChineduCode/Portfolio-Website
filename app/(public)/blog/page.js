@@ -4,7 +4,7 @@ export const metadata = {
 }
 import Link from "next/link";
 
-const Blog = () => {
+export default function BlogPage() {
     return ( 
         <section className="blog">
             <section className="header">
@@ -27,5 +27,3 @@ const Blog = () => {
         </section>
     );
 }
- 
-export default Blog;

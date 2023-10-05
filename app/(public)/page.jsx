@@ -4,9 +4,8 @@ import DownloadCV from '../../components/DownloadCV'
 import Testimonials from '../../components/Testimonial'
 import Projects from '@/components/Projects'
 import Link from 'next/link'
-import { Suspense } from 'react'
 
-export default async function Home(){
+export default async function HomePage(){
   
   let skills = [
     {
@@ -87,9 +86,8 @@ export default async function Home(){
             <h2 className="sub_heading">My Complete Projects</h2>
           </div>
         </div>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Projects /> 
-        </Suspense>
+
+        <Projects /> 
 
         <Link href={'/portfolio'} className='view_more'>View more ...</Link>
       </section>

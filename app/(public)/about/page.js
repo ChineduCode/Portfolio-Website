@@ -5,7 +5,7 @@ import WorkStats from "../../../components/WorkStats";
 import Testimonials from '../../../components/Testimonial'
 import { useState } from "react";
 
-const About = () => {
+export default function AboutPage() {
 
     const educations = [
         {
@@ -181,7 +181,5 @@ const About = () => {
             <Testimonials />
             
         </section>
-    ) ;
+    );
 } 
-
-export default About;

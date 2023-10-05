@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Loading from '@/components/Loading'
 import Portfolio from '@/components/Portfolio'
 
-export default function Porfolio(){
+export default function PorfolioPage(){
     let [portfolios, setPortfolios] = useState([])
     const [loading, setLoading] = useState()
     let [stack, setStack] = useState('')

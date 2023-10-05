@@ -10,7 +10,7 @@ async function postMessage(newMessage){
     })
 }
 
-const Contact = () => {
+export default function ContactPage() {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [subject, setSubject] = useState('')
@@ -94,5 +94,3 @@ const Contact = () => {
         </section>
     );
 }
-
-export default Contact;
