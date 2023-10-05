@@ -4,7 +4,7 @@ import { FaDownload } from 'react-icons/fa6'
 const DownloadCV = () => {
   return (
     <div className='download_cv_container'>
-      <Link href={'RESUME-chinedu.pdf'} className="download_cv" download={'RESUME_CHINEDU.pdf'}>
+      <Link href={'RESUME-chinedu.pdf'} target='_blank' className="download_cv" download={'RESUME_CHINEDU.pdf'}>
         <span>Download CV</span> <FaDownload />
       </Link> 
     </div>
