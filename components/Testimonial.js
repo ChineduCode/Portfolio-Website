@@ -1,6 +1,6 @@
 'use client'
 import {FaQuoteLeft, FaAnglesLeft, FaAnglesRight} from 'react-icons/fa6'
-import { useRef } from 'react'
+import { useState, useRef } from 'react'
 
 const Testimonials = ()=>{
 
@@ -31,29 +31,32 @@ const Testimonials = ()=>{
         }
     ]
 
-    const myRef = useRef(null)
+    const containerRef = useRef(null)
+    const [scrollPosition, setScrollPosition] = useState(0);
 
-    const handleScroll = (e)=>{
-        const icon = e.target
-        const container = myRef.current
-
-        if(icon.className === 'next_icon'){
-            const testimonial = icon.parentElement.previousSibling
-            testimonial.scroll()
-        }else if(icon.className === 'previous_icon'){
-            console.log(container+ ' previous') 
+    const scrollToLeft = () => {
+        if(containerRef.current) {
+            containerRef.current.scrollLeft -= 100; // Adjust the scroll distance as needed
+            setScrollPosition(containerRef.current.scrollLeft);
         }
-    }
+    };
+
+    const scrollToRight = () => {
+        if(containerRef.current) {
+            containerRef.current.scrollLeft += 100; // Adjust the scroll distance as needed
+            setScrollPosition(containerRef.current.scrollLeft);
+        }
+    };
 
     
     return(
-        <section className="testimonial_container" onClick={handleScroll}>
+        <section className="testimonial_container">
             <div className="header">
                 <div className="heading">|| <span>Testimonials</span></div>
                 <h2 className="sub_heading">Satisfied Clients Say</h2>
             </div>
 
-            <div className="testimonials" ref={myRef}>
+            <div className="testimonials" ref={containerRef}>
                 {testimonials.map((testimonial, index) =>
                     <div className={`testimonial ${testimonial.active ? 'active' : 'testimonial'}` } key={index}>
                         <FaQuoteLeft size={40}/>
@@ -64,8 +67,8 @@ const Testimonials = ()=>{
             </div>
 
             <div className="next_previous_icons">
-                <span className='previous_icon'> <FaAnglesLeft /> </span>
-                <span className='next_icon' > <FaAnglesRight/> </span>
+                <span className='previous_icon' onClick={scrollToLeft}> <FaAnglesLeft /> </span>
+                <span className='next_icon' onClick={scrollToRight}> <FaAnglesRight/> </span>
             </div>
         </section>
     )

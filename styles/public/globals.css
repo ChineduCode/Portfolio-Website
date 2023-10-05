@@ -346,6 +346,9 @@ section.home .home_portfolio .content .title_tools .tools {
   color: hsl(211, 10%, 45%);
   text-transform: uppercase;
 }
+section.home .home_portfolio .content .links {
+  margin: 0.5rem 0;
+}
 section.home .home_portfolio .content .links button {
   padding: 5px 7px;
   font-size: 15px;
