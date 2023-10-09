@@ -8,10 +8,12 @@ export async function POST(request){
         const res = await request.json()
         const {firstname, lastname, email, password} = res
     
-        if(!firstname || !lastname || !password){
+        if(!firstname || !lastname || !email || !password){
             alert('Please fill all fields')
             return
         }
+
+        console.log(res)
     
         await connectDB()
     

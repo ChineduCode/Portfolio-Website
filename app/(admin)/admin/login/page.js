@@ -49,7 +49,7 @@ export default function Login(){
                     />
                 </div>
 
-                <button type="submit">Login</button>
+                <button type="submit" className="login-btn">Login</button>
 
                 <div className="register_link">
                     Don't have an account ? <Link href={'/admin/register'}>Register</Link>

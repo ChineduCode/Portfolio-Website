@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { NextResponse } from 'next/server'
 import { useState } from "react"
 
 export default function Register(){
@@ -18,41 +19,45 @@ export default function Register(){
         //error check
         if(!firstname || !lastname || !email || !password || !confirmPassword){
             setError('Fill all the blank spaces')
-            setTimeout(()=> error.remove(), 3000)
             return
         }
 
         if(password.length < 8){
             setError('Password must be more than 7 characters')
-            setTimeout(()=> error.remove(), 3000)
             return
         }
 
         if(confirmPassword !== password){
             setError('Passwords must be the same')
-            setTimeout(()=> error.remove(), 3000)
             return
         }
 
-
-        fetch('http://localhost:3000/api/admin/register', {
-            method: 'POST',
-            body: JSON.stringify({
-                firstname,
-                lastname,
-                email,
-                password
+        try {
+            const res = await fetch('/api/admin/register', {
+                method: 'POST',
+                headers: {'Content-type' : 'application.json'},
+                body: JSON.stringify({
+                    firstname,
+                    lastname,
+                    email,
+                    password
+                })
             })
-        })
-        .catch(error => new Error(`Can't post credentials to the server : ${error}`))
-        .finally(console.log('submitted'))
 
+            if(res.ok){
+                console.log('Crendentials successfully sent to the server')
 
-        setFirstname('')
-        setLastname('')
-        setEmail('')
-        setPassword('')
-        setConfirmPassword('')
+                setFirstname('')
+                setLastname('')
+                setEmail('')
+                setPassword('')
+                setConfirmPassword('')
+            }
+
+        } catch (error) {
+            console.error(`Can't post credentials to the server : ${error}`)
+        }
+
     }
 
     return(
@@ -112,7 +117,7 @@ export default function Register(){
                     />
                 </div>
 
-                <div className="btn"> <button type="submit">Register</button> </div>
+                <div className="btn"> <button type="submit" className='register-btn'>Register</button> </div>
 
                 <div className="login"> Have an account? <Link href={'/admin/login'}>Login</Link> </div>
             </form>

@@ -32,19 +32,16 @@ const Testimonials = ()=>{
     ]
 
     const containerRef = useRef(null)
-    const [scrollPosition, setScrollPosition] = useState(0);
 
     const scrollToLeft = () => {
         if(containerRef.current) {
             containerRef.current.scrollLeft -= 100; // Adjust the scroll distance as needed
-            setScrollPosition(containerRef.current.scrollLeft);
         }
     };
 
     const scrollToRight = () => {
         if(containerRef.current) {
             containerRef.current.scrollLeft += 100; // Adjust the scroll distance as needed
-            setScrollPosition(containerRef.current.scrollLeft);
         }
     };
 

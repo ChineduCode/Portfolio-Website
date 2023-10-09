@@ -90,7 +90,7 @@ export default function createNewBlog(){
                     required
                 />
                 
-                <button type="submit">Create Post</button>
+                <button type="submit" className='create-post-btn'>Create Post</button>
             </form>
         </section>
     )

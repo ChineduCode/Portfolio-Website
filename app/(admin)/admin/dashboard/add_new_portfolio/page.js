@@ -65,7 +65,7 @@ export default function addNewPortfolio(){
                     />
                 </div>
 
-                <button type="submit">Add Portfolio</button>
+                <button type="submit" className="add-portfolio-btn">Add Portfolio</button>
             </form>
         </section>
     )
