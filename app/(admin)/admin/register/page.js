@@ -40,18 +40,19 @@ export default function Register(){
                     firstname,
                     lastname,
                     email,
-                    password
+                    password,
+                    confirmPassword
                 })
             })
 
             if(res.ok){
-                console.log('Crendentials successfully sent to the server')
-
                 setFirstname('')
                 setLastname('')
                 setEmail('')
                 setPassword('')
                 setConfirmPassword('')
+            }else{
+                throw new Error(`Can't upload to the server`)
             }
 
         } catch (error) {

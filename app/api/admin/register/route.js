@@ -5,14 +5,23 @@ import bcrypt from 'bcryptjs'
 
 export async function POST(request){
     try {
-        await connectDB()
-
+        
         const res = await request.json()
         const {firstname, lastname, email, password} = res
     
         if(!firstname || !lastname || !email || !password){
             NextResponse.json({'msg': 'Please fill all fields'})
         }
+
+        if(password.length < 8){
+            NextResponse.json({msg: 'Password must be more than seven characters'})
+        }
+
+        if(confirmPassword !== password){
+            NextResponse.json({msg: `Passwords do not match`})
+        }
+
+        await connectDB()
         
         //Check if email already exist
         const adminExists = await Admin.findOne({email})
