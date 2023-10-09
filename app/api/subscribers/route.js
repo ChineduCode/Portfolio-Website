@@ -19,7 +19,7 @@ export async function POST(request){
         const subscriberExist = await Subscriber.findOne({email})
         if(subscriberExist){
             console.log('Email Already Exist')
-            return NextResponse.json({msg: 'Email Already Exist'})
+            return NextResponse.json({msg: 'Email Already Exist'}) 
         }
 
         //Add subscriber

@@ -7,18 +7,18 @@ export async function POST(request){
     try {
         
         const res = await request.json()
-        const {firstname, lastname, email, password} = res
+        const {firstname, lastname, email, password, confirmPassword} = res
     
         if(!firstname || !lastname || !email || !password){
-            NextResponse.json({'msg': 'Please fill all fields'})
+            return NextResponse.json({'msg': 'Please fill all fields'})
         }
 
         if(password.length < 8){
-            NextResponse.json({msg: 'Password must be more than seven characters'})
+            return NextResponse.json({msg: 'Password must be more than seven characters'})
         }
 
         if(confirmPassword !== password){
-            NextResponse.json({msg: `Passwords do not match`})
+            return NextResponse.json({msg: `Passwords do not match`})
         }
 
         await connectDB()
@@ -41,7 +41,7 @@ export async function POST(request){
         })
         
         if(admin){
-            NextResponse.json({msg: `Congratulations, You're now an Admin`})
+            return NextResponse.json({msg: `Congratulations, You're now an Admin`})
         }else{
            throw new Error(`Admin not created`)
         }

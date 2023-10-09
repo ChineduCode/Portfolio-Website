@@ -32,33 +32,25 @@ export default function Register(){
             return
         }
 
-        try {
-            const res = await fetch('/api/admin/register', {
-                method: 'POST',
-                headers: {'Content-type' : 'application.json'},
-                body: JSON.stringify({
-                    firstname,
-                    lastname,
-                    email,
-                    password,
-                    confirmPassword
-                })
+        const res = await fetch('/api/admin/register', {
+            method: 'POST',
+            headers: {'Content-type' : 'application.json'},
+            body: JSON.stringify({
+                firstname,
+                lastname,
+                email,
+                password,
+                confirmPassword
             })
+        })
 
-            if(res.ok){
-                setFirstname('')
-                setLastname('')
-                setEmail('')
-                setPassword('')
-                setConfirmPassword('')
-            }else{
-                throw new Error(`Can't upload to the server`)
-            }
-
-        } catch (error) {
-            console.error(`Can't post credentials to the server : ${error}`)
+        if(res.ok){
+            setFirstname('')
+            setLastname('')
+            setEmail('')
+            setPassword('')
+            setConfirmPassword('')
         }
-
     }
 
     return(
