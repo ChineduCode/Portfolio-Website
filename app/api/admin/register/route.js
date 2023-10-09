@@ -5,38 +5,37 @@ import bcrypt from 'bcryptjs'
 
 export async function POST(request){
     try {
+        await connectDB()
+
         const res = await request.json()
         const {firstname, lastname, email, password} = res
     
         if(!firstname || !lastname || !email || !password){
-            alert('Please fill all fields')
-            return
+            NextResponse.json({'msg': 'Please fill all fields'})
         }
-
-        console.log(res)
-    
-        await connectDB()
-    
+        
+        //Check if email already exist
         const adminExists = await Admin.findOne({email})
         if(adminExists){
-            console.log('Admin already exist, please login')
-            return
+            throw new Error('Admin with the email already exist')
         }
         
         //Hash Password
         const salt = await bcrypt.genSalt(10)
         const hashedPassword = await bcrypt.hash(password, salt)
-        
-        const admin = new Admin({
+
+        const admin = await Admin.create({
             firstname,
             lastname,
             email,
             password: hashedPassword
         })
-
-        console.log(admin)
-        await admin.save()
-        return NextResponse.json({admin})
+        
+        if(admin){
+            NextResponse.json({msg: `Congratulations, You're now an Admin`})
+        }else{
+           throw new Error(`Admin not created`)
+        }
         
     } catch (error) {
         throw new Error(error)
