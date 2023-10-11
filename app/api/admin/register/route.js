@@ -4,24 +4,24 @@ import Admin from "@/Models/admin";
 import bcrypt from 'bcryptjs'
 import { generateToken } from "@/lib/auth";
 
-export async function POST(req, res){
+export async function POST(request){
+
+    const res = await request.json()
+    const {username, email, password, confirmPassword} = res
+
+    if(!username|| !email || !password){
+        return NextResponse.json({'msg': 'Please fill all fields'})
+    }
+
+    if(password.length < 8){
+        return NextResponse.json({msg: 'Password must be more than seven characters'})
+    }
+
+    if(confirmPassword !== password){
+        return NextResponse.json({msg: `Passwords do not match`})
+    }
+
     try {
-        const res = await req.json()
-        const {username, email, password, confirmPassword} = res
-    
-        if(!username|| !email || !password){
-            return NextResponse.json({'msg': 'Please fill all fields'})
-        }
-
-        if(password.length < 8){
-            return NextResponse.json({msg: 'Password must be more than seven characters'})
-        }
-
-        if(confirmPassword !== password){
-            return NextResponse.json({msg: `Passwords do not match`})
-        }
-
-        console.log(res)
 
         await connectDB()
         
@@ -42,10 +42,8 @@ export async function POST(req, res){
         })
 
         await admin.save()
-        
-        //Generate jwt token
-        const jwtToken = generateToken(admin) 
-        return new Response(res)
+
+        return NextResponse.json(admin)
         
     } catch (error) {
         throw new Error(error)
