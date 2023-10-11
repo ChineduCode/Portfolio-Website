@@ -2,26 +2,48 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 
 export default function Login(){
-    const [email, setEmail] = useState('')
+    const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-    let [error, setError] = useState(false)
-    let [success, setSuccess] = useState(false)
     let [errorMsg, setErrorMsg] = useState('')
+
+    const router = useRouter()
     
     async function handleLogin(e){
         e.preventDefault()
         
-        if(!email || !password){
+        if(!username || !password){
             setErrorMsg('Fill all blank fields')
             return
         }
+        
+        try {
+            const res = await fetch('/api/admin/login', {
+                method : 'POST',
+                headers: {'Content-type' : 'Application.json'},
+                body: JSON.stringify({
+                    username, 
+                    password
+                })
+            })
 
-        await fetch('/api/admin/login', {
-            method : 'POST',
-            body: JSON.stringify({email, password})
-        })
+            if(res.ok){
+                setUsername('')
+                setPassword('')
+                
+                router.push('/admin/dashboard')
+            }else{
+                setErrorMsg('Invalid credentials')
+                return new Response(errorMsg, {
+                    status: 401
+                })
+            }
+            
+        } catch (error) {
+            console.error(error)
+        }
     }
 
     return( 
@@ -31,11 +53,11 @@ export default function Login(){
             <form action="" className="login" onSubmit={handleLogin}>
                 <div className='control'>
                     <input 
-                        type="email" 
-                        name="email" 
-                        placeholder="Email"
-                        value={email}
-                        onChange={(e)=> setEmail(e.target.value)}
+                        type="text" 
+                        name="username" 
+                        placeholder="Username"
+                        value={username}
+                        onChange={(e)=> setUsername(e.target.value)}
                     />
                 </div>
 
