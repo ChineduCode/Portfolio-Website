@@ -1,5 +1,5 @@
-import { NextResponse } from "next/server"
 import Admin from "@/Models/admin"
+import connectDB from "@/lib/connectDB"
 import bcrypt from 'bcryptjs'
 
 export async function POST(request){
@@ -13,10 +13,14 @@ export async function POST(request){
     }
 
     try {
+        await connectDB()
+
         const admin = await Admin.findOne({username})
-    
+        //Check for the username and also compare the password
         if(admin && (await bcrypt.compare(password, admin.password))){
-            return NextResponse.json(admin)
+            return new Response(admin, {
+                status: 200
+            })
         }else{
             return new Response('Invalid credentials', {
                 status: 401
