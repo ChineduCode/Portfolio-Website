@@ -1,15 +1,15 @@
-import { NextResponse } from "next/server"; 
-import connectDB from "@/connectDB";
+import { NextResponse } from "next/server";
+import connectDB from "@/lib/connectDB";
 import Admin from "@/Models/admin";
 import bcrypt from 'bcryptjs'
+import { generateToken } from "@/lib/auth";
 
-export async function POST(request){
+export async function POST(req, res){
     try {
-        
-        const res = await request.json()
-        const {firstname, lastname, email, password, confirmPassword} = res
+        const res = await req.json()
+        const {username, email, password, confirmPassword} = res
     
-        if(!firstname || !lastname || !email || !password){
+        if(!username|| !email || !password){
             return NextResponse.json({'msg': 'Please fill all fields'})
         }
 
@@ -20,6 +20,8 @@ export async function POST(request){
         if(confirmPassword !== password){
             return NextResponse.json({msg: `Passwords do not match`})
         }
+
+        console.log(res)
 
         await connectDB()
         
@@ -33,18 +35,17 @@ export async function POST(request){
         const salt = await bcrypt.genSalt(10)
         const hashedPassword = await bcrypt.hash(password, salt)
 
-        const admin = await Admin.create({
-            firstname,
-            lastname,
+        const admin = new Admin({
+            username,
             email,
             password: hashedPassword
         })
+
+        await admin.save()
         
-        if(admin){
-            return NextResponse.json({msg: `Congratulations, You're now an Admin`})
-        }else{
-           throw new Error(`Admin not created`)
-        }
+        //Generate jwt token
+        const jwtToken = generateToken(admin) 
+        return new Response(res)
         
     } catch (error) {
         throw new Error(error)

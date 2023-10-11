@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import connectDB from "@/connectDB";
+import connectDB from "@/lib/connectDB";
 import Subscriber from "@/Models/subscriber";
 
 //Post request

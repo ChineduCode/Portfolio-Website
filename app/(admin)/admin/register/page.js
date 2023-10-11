@@ -1,23 +1,23 @@
 'use client'
 
 import Link from 'next/link'
-import { NextResponse } from 'next/server'
 import { useState } from "react"
+import { useRouter } from 'next/navigation';
 
 export default function Register(){
-    const [firstname, setFirstname] = useState('')
-    const [lastname, setLastname] = useState('')
+    const router = useRouter()
+    
+    const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
-    const [data, setData] = useState(null)
     let [error, setError] = useState()
 
     async function register(e){
         e.preventDefault() 
         
         //error check
-        if(!firstname || !lastname || !email || !password || !confirmPassword){
+        if(!username|| !email || !password || !confirmPassword){
             setError('Fill all the blank spaces')
             return
         }
@@ -36,8 +36,7 @@ export default function Register(){
             method: 'POST',
             headers: {'Content-type' : 'application.json'},
             body: JSON.stringify({
-                firstname,
-                lastname,
+                username,
                 email,
                 password,
                 confirmPassword
@@ -45,11 +44,12 @@ export default function Register(){
         })
 
         if(res.ok){
-            setFirstname('')
-            setLastname('')
+            setUsername('')
             setEmail('')
             setPassword('')
             setConfirmPassword('')
+
+            router.push('/admin/login')
         }
     }
 
@@ -63,20 +63,10 @@ export default function Register(){
                 <div className="control">
                     <input
                         type="text" 
-                        name="firstname" 
-                        placeholder="First Name"
-                        value={firstname} 
-                        onChange={(e)=> setFirstname(e.target.value)} 
-                    />
-                </div>
-
-                <div className="control">
-                    <input
-                        type="text" 
-                        name="lastname"
-                        placeholder="Last Name"
-                        value={lastname}
-                        onChange={(e)=> setLastname(e.target.value)}
+                        name="username" 
+                        placeholder="Username"
+                        value={username} 
+                        onChange={(e)=> setUsername(e.target.value)} 
                     />
                 </div>
 
