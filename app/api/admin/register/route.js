@@ -51,7 +51,7 @@ export async function POST(request){
         const token = generateToken(admin)
         const serialized = serialize('OutSiteJwt', token, {
             httpOnly: true,
-            maxAge: MAX_AGE
+            maxAge: 60 * 60 * 24 * 30
         })
 
         return new Response(admin, {
