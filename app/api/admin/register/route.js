@@ -54,7 +54,10 @@ export async function POST(request){
             maxAge: MAX_AGE
         })
 
-        return new Response(admin, {status: 200})
+        return new Response(admin, {
+            status: 200,
+            headers: {'Set-Cookie': serialized}
+        })
         
     } catch (error) {
         throw new Error(error)
