@@ -1,6 +1,7 @@
 import Admin from "@/Models/admin"
 import connectDB from "@/lib/connectDB"
 import bcrypt from 'bcryptjs'
+import { generateToken, verifyToken } from "@/lib/auth"
 
 export async function POST(request){
     const res  = await request.json()
@@ -18,12 +19,22 @@ export async function POST(request){
         const admin = await Admin.findOne({username})
         //Check for the username and also compare the password
         if(admin && (await bcrypt.compare(password, admin.password))){
-            return new Response(admin, {
-                status: 200
+
+            //Generate token
+            const token = generateToken(admin)
+            const serialized = serialize('OutSiteJwt', token, {
+                httpOnly: true,
+                maxAge: 60 * 60 * 24 * 30
             })
+    
+            return new Response(admin, {
+                status: 200,
+                headers: {'Set-Cookie': serialized}
+            })
+
         }else{
             return new Response('Invalid credentials', {
-                status: 401
+                status: 404
             })
         }
         
