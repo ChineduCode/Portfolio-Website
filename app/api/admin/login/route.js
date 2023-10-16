@@ -10,7 +10,7 @@ export async function POST(request){
     
     if(!username || !password){
         return new Response('Fill all fields', {
-            status: 400
+            status: 401
         })
     }
 
@@ -26,7 +26,7 @@ export async function POST(request){
         //compare and check for the password
         const validPassword = await bcrypt.compare(password, admin.password)
         if(!validPassword){
-            return new Response('Invalid password', {status: 404})
+            return new Response('Invalid password', {status: 401})
         }
         
         //Generate token if all went well
