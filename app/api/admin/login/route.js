@@ -1,8 +1,8 @@
 import Admin from "@/Models/admin"
 import connectDB from "@/lib/connectDB"
 import bcrypt from 'bcryptjs'
-import { generateToken, verifyToken } from "@/lib/auth"
-import { serialize } from "cookie"
+// import { generateToken, verifyToken } from "@/lib/auth"
+// import { serialize } from "cookie"
 
 export async function POST(request){
     const res  = await request.json()
@@ -29,16 +29,16 @@ export async function POST(request){
             return new Response('Invalid password', {status: 401})
         }
         
-        //Generate token if all went well
-        const token = generateToken(admin)
-        const serialized = serialize('OutSiteJwt', token, {
-            httpOnly: true,
-            maxAge: 60 * 60 * 24 * 30
-        })
+        // //Generate token if all went well
+        // const token = generateToken(admin)
+        // const serialized = serialize('OutSiteJwt', token, {
+        //     httpOnly: true,
+        //     maxAge: 60 * 60 * 24 * 30
+        // })
 
         return new Response(admin, {
             status: 200,
-            headers: {'Set-Cookie': serialized}
+            //headers: {'Set-Cookie': serialized}
         })
         
     } catch (error) {

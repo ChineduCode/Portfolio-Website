@@ -32,7 +32,6 @@ export default function Login(){
             if(res.ok){
                 setUsername('')
                 setPassword('')
-                
                 router.push('/admin/dashboard')
             }else{
                 setErrorMsg('Invalid credentials')
