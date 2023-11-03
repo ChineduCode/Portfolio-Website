@@ -66,7 +66,7 @@ const Footer = () => {
             </div> 
 
             <div className="footer bottom">
-                <div className="copyright"> &copy; 2023 <span className='name'>ChineduCode.</span> All rights reserved</div>
+                <div className="copyright"> &copy; 2023 <span className='name'>ChineduCode.</span> &nbsp;All rights reserved</div>
             </div>
         </footer>
     );
