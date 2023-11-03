@@ -194,7 +194,13 @@ footer .bottom {
   grid-template-columns: repeat(6, minmax(100%, auto));
   grid-column-gap: 3%;
   padding: 0 1rem;
-  overflow-x: scroll;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.testimonial_container .testimonials::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 .testimonial_container .testimonials .testimonial {
   margin: 1rem 0;

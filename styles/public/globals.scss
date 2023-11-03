@@ -203,7 +203,15 @@ footer{
         grid-template-columns: repeat(6, minmax(100%, auto));
         grid-column-gap: 3%;
         padding: 0 1rem;
-        overflow-x: scroll;
+        overflow-x: auto;
+        scrollbar-width: none; //Firefox 
+        -ms-overflow-style: none; //IE/Edge
+
+        //Hide scrollbar for Webkit-based browsers (Chrome, Safari)
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
         
         .testimonial{
             svg{color: hsl(243, 100%, 62%);}
