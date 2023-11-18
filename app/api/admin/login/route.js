@@ -1,8 +1,6 @@
 import Admin from "@/Models/admin"
 import connectDB from "@/lib/connectDB"
 import bcrypt from 'bcryptjs'
-import { generateToken, verifyToken } from "@/lib/auth"
-import { serialize } from "cookie"
 
 export async function POST(request){
     const admin  = await request.json()

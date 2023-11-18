@@ -8,7 +8,6 @@ export default function PorfolioPage(){
     let [portfolios, setPortfolios] = useState([])
     const [loading, setLoading] = useState()
     let [stack, setStack] = useState('')
-    let [active, setActive] = useState(' active')
     const filterContainer = useRef(null)
 
     useEffect(()=> {
