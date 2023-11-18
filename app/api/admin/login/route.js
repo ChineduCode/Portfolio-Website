@@ -28,13 +28,6 @@ export async function POST(request){
         if(!validPassword){
             return new Response('Invalid password', {status: 401})
         }
-        
-        //Generate token if all went well
-        const token = generateToken(admin)
-        const serialized = serialize('MyCookie', token, {
-            httpOnly: true,
-            maxAge: 60 * 60 * 24 * 30
-        })
 
         return new Response(admin, {status: 200 })
         
