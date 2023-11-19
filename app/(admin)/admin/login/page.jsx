@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 
@@ -22,7 +22,7 @@ export default function LoginPage(){
         try {
             const res = await fetch('/api/admin/login', {
                 method : 'POST',
-                headers: {'Content-type' : 'Application.json'},
+                headers: {'Content-type' : 'application/json'},
                 body: JSON.stringify({
                     username, 
                     password
