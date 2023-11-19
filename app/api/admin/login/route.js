@@ -27,10 +27,10 @@ export async function POST(request){
             return new Response('Invalid password', {status: 401})
         }
 
-        return Response(admin, {status: 200 })
+        return new Response(admin, {status: 200 })
         
     } catch (error) {
-        throw new Error(error)
+        console.log(error)
     }
 
 }
