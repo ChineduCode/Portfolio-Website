@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 
@@ -15,7 +15,7 @@ export default function LoginPage(){
         e.preventDefault()
         
         if(!username || !password){
-            setErrorMsg('Fill all blank fields')
+            await errorDisplay('Fill all blank fields', setErrorMsg)
             return
         }
         
@@ -34,7 +34,7 @@ export default function LoginPage(){
                 setPassword('')
                 router.push('/admin/dashboard')
             }else{
-                setErrorMsg('Invalid credentials')
+                await errorDisplay('Invalid credentials', setErrorMsg)
                 return new Response(errorMsg, {
                     status: 401
                 })
@@ -43,6 +43,12 @@ export default function LoginPage(){
         } catch (error) {
             console.error(error)
         }
+    }
+
+    async function errorDisplay(error, setErrorMsg){
+        setErrorMsg(error)
+        await new Promise(resolve => setTimeout(resolve, 5000))
+        setErrorMsg('')
     }
 
     return( 
