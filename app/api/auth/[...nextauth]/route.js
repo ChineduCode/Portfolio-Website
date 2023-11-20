@@ -19,51 +19,54 @@ const handler = NextAuth({
                 if(!username || !password){
                     throw new Error('Please fill all fields')
                 }
-                // try {
-                //     await connectDB()
-            
-                //     const admin = await Admin.findOne({username})
-                //     //Check if the user does not exit
-                //     if(!admin){
-                //         return new Response('Admin not found', {status: 404})
-                //     }
-            
-                //     //compare and check for the password
-                //     const validPassword = await bcrypt.compare(password, admin.password)
-                //     if(!validPassword){
-                //         return new Response('Invalid password', {status: 401})
-                //     }
-            
-                //     return new Response(admin, {status: 200 })
-                    
-                // } catch (error) {
-                //     console.log(error)
-                // }
                 try {
-                    
-                    const user = {
-                        name: 'chineducode',
-                        email: 'chineducode@gmail.com',
-                        nickname: 'martino',
-                        password: '12345678'
+                    await connectDB()
+            
+                    const admin = await Admin.findOne({username})
+                    //Check if the user does not exit
+                    if(!admin){
+                        //return new Response('Admin not found', {status: 404})
+                        throw new Error('Admin not found')
                     }
-
-                    if(username != user.name){
-                        throw new Error('User not found')
+            
+                    //compare and check for the password
+                    const validPassword = await bcrypt.compare(password, admin.password)
+                    if(!validPassword){
+                        //return new Response('Invalid password', {status: 401})
+                        throw new Error('Invalid password')
                     }
-                    if(password != user.password){
-                        throw new Error('Wrong password')
-                    }
-    
-                    if(user){
-                        return user
-                    }else{
-                        return null
-                    }
+            
+                    return new Response(admin, {status: 200 })
                     
                 } catch (error) {
                     console.log(error.message)
                 }
+
+                // try {
+                    
+                //     const user = {
+                //         name: 'chineducode',
+                //         email: 'chineducode@gmail.com',
+                //         nickname: 'martino',
+                //         password: '12345678'
+                //     }
+
+                //     if(username != user.name){
+                //         throw new Error('User not found')
+                //     }
+                //     if(password != user.password){
+                //         throw new Error('Wrong password')
+                //     }
+    
+                //     if(user){
+                //         return user
+                //     }else{
+                //         return null
+                //     }
+                    
+                // } catch (error) {
+                //     console.log(error.message)
+                // }
             }
         })
     ],
