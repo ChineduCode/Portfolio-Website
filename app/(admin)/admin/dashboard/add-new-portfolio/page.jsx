@@ -11,7 +11,10 @@ export default function addNewPortfolio(){
     let [live_link, setLive_Link] = useState('')
     let [github_link, setGithub_Link] = useState('')
 
-    function handleSubmit(e){}
+    function handleSubmit(e){
+        e.preventDefault()
+        console.log(e)
+    }
 
     return(
         <section className="add_new_portfolio">
