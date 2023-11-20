@@ -3,8 +3,6 @@ import Providers from '@/components/Providers'
 
 export default function AdminLayout({children}){
     return(
-        <Providers>
-            <main> {children} </main>
-        </Providers>
+        <main> {children} </main>
     )
 }
