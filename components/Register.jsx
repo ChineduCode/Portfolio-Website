@@ -11,30 +11,30 @@ export default function Register(){
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
-    let [error, setError] = useState()
+    let [error, setError] = useState(null)
 
     async function register(e){
         e.preventDefault() 
         
         //error check
         if(!username|| !email || !password || !confirmPassword){
-            setError('Fill all the blank spaces')
+            await errorDisplay('Fill all blank fields', setError)
             return
         }
 
         if(password.length < 8){
-            setError('Password must be more than 7 characters')
+            await errorDisplay('Password must be more than 7 characters', setError)
             return
         }
 
         if(confirmPassword !== password){
-            setError('Passwords must be the same')
+            await errorDisplay('Passwords do not match', setError)
             return
         }
 
         const res = await fetch('/api/admin/register', {
             method: 'POST',
-            headers: {'Content-type' : 'application.json'},
+            headers: {'Content-Type' : 'application/json'},
             body: JSON.stringify({
                 username,
                 email,
@@ -48,9 +48,14 @@ export default function Register(){
             setEmail('')
             setPassword('')
             setConfirmPassword('')
-
             router.push('/admin/login')
         }
+    }
+
+    async function errorDisplay(error, setErrorMsg){
+        setErrorMsg(error)
+        await new Promise(resolve => setTimeout(resolve, 5000))
+        setErrorMsg('')
     }
 
     return(
