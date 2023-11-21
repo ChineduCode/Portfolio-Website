@@ -9,15 +9,15 @@ export async function POST(request){
     const {username, email, password, confirmPassword} = res
 
     if(!username|| !email || !password){
-        return NextResponse.json({'msg': 'Please fill all fields'})
+        return new Response('Please fill all fields', {status: 400})
     }
 
     if(password.length < 8){
-        return NextResponse.json({msg: 'Password must be more than seven characters'})
+        return new Response('Password must be more than seven characters', {status: 401})
     }
 
     if(confirmPassword !== password){
-        return NextResponse.json({msg: `Passwords do not match`})
+        return new Response('Passwords do not match', {status: 401})
     }
 
     try {

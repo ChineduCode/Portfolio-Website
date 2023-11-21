@@ -20,6 +20,7 @@ const handler = NextAuth({
                     throw new Error('Please fill all fields')
                 }
                 try {
+                    //connect to database
                     await connectDB()
             
                     const admin = await Admin.findOne({username})
@@ -41,32 +42,6 @@ const handler = NextAuth({
                 } catch (error) {
                     console.log(error.message)
                 }
-
-                // try {
-                    
-                //     const user = {
-                //         name: 'chineducode',
-                //         email: 'chineducode@gmail.com',
-                //         nickname: 'martino',
-                //         password: '12345678'
-                //     }
-
-                //     if(username != user.name){
-                //         throw new Error('User not found')
-                //     }
-                //     if(password != user.password){
-                //         throw new Error('Wrong password')
-                //     }
-    
-                //     if(user){
-                //         return user
-                //     }else{
-                //         return null
-                //     }
-                    
-                // } catch (error) {
-                //     console.log(error.message)
-                // }
             }
         })
     ],
