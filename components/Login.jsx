@@ -33,7 +33,6 @@ export default function Login(){
                 router.push('/admin/dashboard')
                 router.refresh('/admin/dashboard')
             }else{
-                console.log(res)
                 await errorDisplay('Invalid credentials', setErrorMsg)
                 return new Response(errorMsg, {
                     status: 401
@@ -55,7 +54,7 @@ export default function Login(){
         <section className="login"> 
             <h2 className="header">Login</h2>
             <div className="error">{errorMsg}</div>
-            <form action="" className="login" onSubmit={handleLogin}>
+            <form className="login" onSubmit={handleLogin}>
                 <div className='control'>
                     <input 
                         type="text" 
