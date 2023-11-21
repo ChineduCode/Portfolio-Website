@@ -21,12 +21,10 @@ export default function Register(){
             await errorDisplay('Fill all blank fields', setError)
             return
         }
-
         if(password.length < 8){
             await errorDisplay('Password must be more than 7 characters', setError)
             return
         }
-
         if(confirmPassword !== password){
             await errorDisplay('Passwords do not match', setError)
             return
@@ -61,9 +59,7 @@ export default function Register(){
     return(
         <section className="register">
             <h2 className="header">Register</h2>
-
-            <div className="error"> {error} </div>
-
+            <small className="error"> {error} </small>
             <form action="" method="post" onSubmit={register}>
                 <div className="control">
                     <input

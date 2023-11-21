@@ -53,7 +53,7 @@ export default function Login(){
     return( 
         <section className="login"> 
             <h2 className="header">Login</h2>
-            <div className="error">{errorMsg}</div>
+            <small className="error">{errorMsg}</small>
             <form className="login" onSubmit={handleLogin}>
                 <div className='control'>
                     <input 
