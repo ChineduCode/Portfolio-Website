@@ -13,6 +13,7 @@ export async function POST(request){
     }
 
     try {
+        //connect to database
         await connectDB()
 
         const admin = await Admin.findOne({username})
