@@ -27,14 +27,12 @@ const handler = NextAuth({
                     const admin = await Admin.findOne({username})
                     //Check if the user does not exit
                     if(!admin){
-                        //return new Response('Admin not found', {status: 404})
                         throw new Error('Admin not found')
                     }
             
                     //compare and check for the password
                     const validPassword = await bcrypt.compare(password, admin.password)
                     if(!validPassword){
-                        //return new Response('Invalid password', {status: 401})
                         throw new Error('Invalid password')
                     }
             
