@@ -13,12 +13,13 @@ const handler = NextAuth({
                 password: {}
             },
 
-            async authorize(credentials, req){
+            async authorize(credentials){
                 const {username, password} = credentials
 
                 if(!username || !password){
                     throw new Error('Please fill all fields')
                 }
+
                 try {
                     //connect to database
                     await connectDB()
@@ -37,7 +38,7 @@ const handler = NextAuth({
                         throw new Error('Invalid password')
                     }
             
-                    return new Response(admin, {status: 200 })
+                    return new Response(admin, {status: 200})
                     
                 } catch (error) {
                     console.log(error.message)
