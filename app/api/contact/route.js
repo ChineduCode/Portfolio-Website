@@ -22,7 +22,8 @@ export async function POST(request){
         from: email,
         to: process.env.USER,
         subject: subject,
-        text: `Am ${name}, ${message}`,
+        text: `Am ${name}, ${message}
+               ${email}`,
     }
 
     //send mail and check for errors
