@@ -1,6 +1,5 @@
 import '../styles/globals/globals.css'
 import { PT_Sans } from 'next/font/google'
-import Header from '../components/Header'
 
 const pt_sans = PT_Sans({
   subsets: ['latin'],
@@ -18,7 +17,6 @@ export default function RootLayout({ children }) {
   return(
     <html lang="en">
       <body className={pt_sans.className}>
-        <Header />
         {children}
       </body>
     </html>
