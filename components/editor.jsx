@@ -11,6 +11,10 @@ const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 const EditorContainer = styled.div`
     width: 80%;
     margin: 2rem auto;
+
+    .ql-editor{
+        font-family: 'inherit', Ubuntu;
+    }
 `;
 
 export default function Editor(){
@@ -73,35 +77,36 @@ const handleFileUpload = async (event) => {
 };
 
 const handleVideo = () => {
-  const url = prompt('Enter the video URL:');
-  if (url) {
-    const editor = document.querySelector('.ql-editor');
-    const range = editor.getSelection(true);
-    editor.insertEmbed(range.index, 'video', url);
-  }
+    const url = prompt('Enter the video URL:');
+    if (url) {
+        const editor = document.querySelector('.ql-editor');
+        const range = editor.getSelection(true);
+        editor.insertEmbed(range.index, 'video', url);
+    }
 };
 
 const editorModules = {
-  toolbar: {
-    container: [
-      [{ header: [1, 2, 3, false] }],
-      ['bold', 'italic', 'underline', 'strike', 'blockquote'],
-      [{ list: 'ordered' }, { list: 'bullet' }],
-      ['link', 'image', 'video'],
-      [{ color: [] }, { background: [] }],
-      ['clean'],
-    ],
-    handlers: {
-      image: handleImage,
-      video: handleVideo,
+    toolbar: {
+        container: [
+            [{ header: [1, 2, 3, false] }],
+            ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+            [{ list: 'ordered' }, { list: 'bullet' }],
+            ['link', 'image', 'video'],
+            [{ color: [] }, { background: [] }],
+            ['clean'],
+        ],
+        handlers: {
+            image: handleImage,
+            video: handleVideo,
+        },
     },
-  },
 };
 
 const editorFormats = [
-  'header',
-  'bold', 'italic', 'underline', 'strike', 'blockquote',
-  'list', 'bullet',
-  'link', 'image', 'video',
-  'color', 'background',
+    'header',
+    'bold', 'italic', 'underline', 'strike', 'blockquote',
+    'list', 'bullet',
+    'link', 'image', 'video',
+    'color', 'background',
+    'font', 'inherit'
 ];
