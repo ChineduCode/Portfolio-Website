@@ -1,7 +1,7 @@
-import newBlog from "@/components/newBlog";
+import NewBlog from "@/components/newBlog"
 
 export default function createNewBlog(){
     return(
-        <newBlog />
+        <NewBlog />
     )
 }

@@ -1,6 +1,6 @@
 import Editor from "./editor";
 
-export default function newBlog(){
+export default function NewBlog(){
     return(
         <Editor />
     )
