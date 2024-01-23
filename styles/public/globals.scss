@@ -28,6 +28,7 @@ footer{
                 border: 1px solid hsl(211, 10%, 45%);
                 font-size: 16px;
                 color: hsl(0, 0%, 100%);
+                font-family: 'inherit', Ubuntu;
             }
             button{
                 margin: 1.5rem 0;
@@ -39,6 +40,7 @@ footer{
                 border-radius: 50px;
                 cursor: pointer;
                 transition: all .4s ease-in-out;
+                font-family: 'inherit', Ubuntu;
                 &:active{
                     border: 1px solid hsl(211, 10%, 45%);
                     color: hsl(211, 10%, 45%);
@@ -385,6 +387,7 @@ section.home{
                     border-radius: 4px;
                     display: inline-block;
                     transition: all .4s ease-in-out;
+                    font-family: 'inherit', Ubuntu;
 
                     &:active{
                         background-color: hsl(0, 0%, 100%);
@@ -610,6 +613,7 @@ section.contact{
                         font-size: 16px;
                         border: 1px solid hsl(231, 11%, 63%);
                         border-radius: 10px;
+                        font-family: 'inherit', Ubuntu;
                     }
                     button{
                         display: inline-block;
@@ -623,6 +627,7 @@ section.contact{
                         border-radius: 10px;
                         letter-spacing: 1px;
                         cursor: pointer;
+                        font-family: 'inherit', Ubuntu;
                         &:active{
                             background-color: hsl(0, 0%, 100%);
                             color: hsl(243, 100%, 62%);
@@ -778,6 +783,7 @@ section.portfolio{
                         border-radius: 4px;
                         display: inline-block;
                         transition: all .4s ease-in-out;
+                        font-family: 'inherit', Ubuntu;
 
                         &:active{
                             background-color: hsl(0, 0%, 100%);

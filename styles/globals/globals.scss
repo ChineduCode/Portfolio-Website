@@ -11,6 +11,7 @@ body{
     background: hsl(0, 0%, 100%);
     scroll-behavior: smooth;
     overflow-x: hidden;
+    font-family: 'inherit', Ubuntu;
 }
 
 svg{cursor: pointer;}
@@ -104,6 +105,7 @@ nav.active_nav{transform: translateX(0%) scaleX(1);}
     font-weight: 600;
     font-size: 16px;
     background-color: hsl(0, 0%, 100%);
+    font-family: 'inherit', Ubuntu;
     cursor: pointer;
 
     &:active{

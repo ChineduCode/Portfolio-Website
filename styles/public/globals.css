@@ -30,6 +30,7 @@ footer .top form input {
   border: 1px solid hsl(211, 10%, 45%);
   font-size: 16px;
   color: hsl(0, 0%, 100%);
+  font-family: "inherit", Ubuntu;
 }
 footer .top form button {
   margin: 1.5rem 0;
@@ -41,6 +42,7 @@ footer .top form button {
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
+  font-family: "inherit", Ubuntu;
 }
 footer .top form button:active {
   border: 1px solid hsl(211, 10%, 45%);
@@ -365,6 +367,7 @@ section.home .home_portfolio .content .links button {
   border-radius: 4px;
   display: inline-block;
   transition: all 0.4s ease-in-out;
+  font-family: "inherit", Ubuntu;
 }
 section.home .home_portfolio .content .links button:active {
   background-color: hsl(0, 0%, 100%);
@@ -579,6 +582,7 @@ section.contact section.hero .contact_me .message_me form input, section.contact
   font-size: 16px;
   border: 1px solid hsl(231, 11%, 63%);
   border-radius: 10px;
+  font-family: "inherit", Ubuntu;
 }
 section.contact section.hero .contact_me .message_me form button {
   display: inline-block;
@@ -592,6 +596,7 @@ section.contact section.hero .contact_me .message_me form button {
   border-radius: 10px;
   letter-spacing: 1px;
   cursor: pointer;
+  font-family: "inherit", Ubuntu;
 }
 section.contact section.hero .contact_me .message_me form button:active {
   background-color: hsl(0, 0%, 100%);
@@ -730,6 +735,7 @@ section.portfolio .hero .projects .content .links button {
   border-radius: 4px;
   display: inline-block;
   transition: all 0.4s ease-in-out;
+  font-family: "inherit", Ubuntu;
 }
 section.portfolio .hero .projects .content .links button:active {
   background-color: hsl(0, 0%, 100%);
