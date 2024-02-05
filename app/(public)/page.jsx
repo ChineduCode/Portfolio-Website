@@ -86,8 +86,8 @@ export default async function HomePage(){
             <h2 className="sub_heading">My Complete Projects</h2>
           </div>
         </div>
-
-        <Projects /> 
+        
+        <Projects /> {/*latest projects */}
 
         <Link href={'/portfolio'} className='view_more'>View more ...</Link>
       </section>
