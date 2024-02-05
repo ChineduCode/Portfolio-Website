@@ -87,7 +87,7 @@ export default async function HomePage(){
           </div>
         </div>
 
-        {/* <Projects />  */}
+        <Projects /> 
 
         <Link href={'/portfolio'} className='view_more'>View more ...</Link>
       </section>
