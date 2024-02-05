@@ -8,9 +8,6 @@ export async function POST(request){
     //Transporter 
     const transporter = nodemailer.createTransport({
         service: 'gmail',
-        host: 'smtp.gmail.com',
-        port: 587,
-        secure: false,
         auth: {
             user: process.env.NODEMAILER_AUTH_USER,
             pass: process.env.NODEMAILER_AUTH_PASS
@@ -22,8 +19,7 @@ export async function POST(request){
         from: email,
         to: process.env.USER,
         subject: subject,
-        text: `Am ${name}, ${message}
-               ${email}`,
+        text: `Am ${name}, ${message}. ${email}`,
     }
 
     //send mail and check for errors
@@ -34,6 +30,6 @@ export async function POST(request){
             console.log('Email sent: ' + info.response);
         }
     })
-
+    
     return NextResponse.json(res)
 } 
