@@ -23,7 +23,7 @@ export async function POST(request){
     }
 
     //send mail and check for errors
-    transporter.sendMail(mailOptions, function(err, info) {
+    await transporter.sendMail(mailOptions, function(err, info) {
         if(err) {
             console.log(err)
         }else{
