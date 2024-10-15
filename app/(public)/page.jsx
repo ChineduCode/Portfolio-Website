@@ -13,27 +13,23 @@ export default async function HomePage(){
       percentage: '95%'
     },
     {
-      name : 'CSS',
-      percentage: '80%'
+      name : 'CSS, SASS/SCSS, TAILWIND CSS',
+      percentage: '90%'
     },
     {
-      name : 'JAVASCRIPT',
+      name : 'JAVASCRIPT & TYPESCRIPT',
       percentage: '85%'
     },
     {
-      name : 'REACT JS',
+      name : 'REACT JS & NEXT JS',
       percentage: '87%'
-    },
-    {
-      name : 'NEXT JS',
-      percentage: '80%'
     },
     {
       name : 'NODE JS & EXPRESS JS',
       percentage: '85%'
     },
     {
-      name : 'MONGODB',
+      name : 'MONGODB & MONGOOSE',
       percentage: '94%'
     },
   ]
