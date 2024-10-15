@@ -1,8 +1,16 @@
 [
     {
+      "image": "/ecommerce.png",
+      "name": "Online Shop",
+      "live_link": "https://chineducodeshop.vercel.app",
+      "github_link": "https://github.com/ChineduCode/ecommerce",
+      "tools": "MERN STACK",
+      "stack": "fullstack"
+    },
+    {
       "image": "/chat-app.png",
       "name": "Chat App",
-      "live_link": "https://chatapp-1-g9js.onrender.com/",
+      "live_link": "https://chatapp-1-g9js.onrender.com",
       "github_link": "https://github.com/ChineduCode/chatapp",
       "tools": "MERN STACK",
       "stack": "fullstack"
