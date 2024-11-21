@@ -1,5 +1,13 @@
 [
     {
+      "image": "/pecunia.png",
+      "name": "Virtual Top-up (VTU)",
+      "live_link": "https://pecuniavest.vercel.app",
+      "github_link": "https://github.com/ChineduCode/pecunia",
+      "tools": "MERN STACK",
+      "stack": "fullstack"
+    },
+    {
       "image": "/ecommerce.png",
       "name": "Online Shop",
       "live_link": "https://chineducodeshop.vercel.app",
